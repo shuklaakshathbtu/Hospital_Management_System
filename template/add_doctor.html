@@ -1,0 +1,356 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+
+
+<!--<head>-->
+<!--	<meta charset="utf-8">-->
+<!--	<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--	<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--	<title>ProClinic-Bootstrap4 Hospital Admin</title>-->
+<!--	&lt;!&ndash; Fav  Icon Link &ndash;&gt;-->
+<!--	<link rel="shortcut icon" type="image/png" href="images/fav.png">-->
+<!--	&lt;!&ndash; Bootstrap core CSS &ndash;&gt;-->
+<!--	<link rel="stylesheet" href="css/bootstrap.min.css">-->
+<!--	&lt;!&ndash; themify icons CSS &ndash;&gt;-->
+<!--	<link rel="stylesheet" href="css/themify-icons.css">-->
+<!--	&lt;!&ndash; Animations CSS &ndash;&gt;-->
+<!--	<link rel="stylesheet" href="css/animate.css">-->
+<!--	&lt;!&ndash; Main CSS &ndash;&gt;-->
+<!--	<link rel="stylesheet" href="css/styles.css">-->
+<!--	<link rel="stylesheet" href="css/green.css" id="style_theme">-->
+<!--	<link rel="stylesheet" href="css/responsive.css">-->
+<!--	&lt;!&ndash; morris charts &ndash;&gt;-->
+<!--	<link rel="stylesheet" href="charts/css/morris.css">-->
+<!--	&lt;!&ndash; jvectormap &ndash;&gt;-->
+<!--	<link rel="stylesheet" href="css/jquery-jvectormap.css">-->
+<!--	<link rel="stylesheet" href="datatable/dataTables.bootstrap4.min.css">-->
+
+<!--	<script src="js/modernizr.min.js"></script>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--	&lt;!&ndash; Pre Loader &ndash;&gt;-->
+<!--	<div class="loading">-->
+<!--		<div class="spinner">-->
+<!--			<div class="double-bounce1"></div>-->
+<!--			<div class="double-bounce2"></div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	&lt;!&ndash;/Pre Loader &ndash;&gt;-->
+<!--	&lt;!&ndash; Color Changer &ndash;&gt;-->
+<!--	<div class="theme-settings" id="switcher">-->
+<!--		<span class="theme-click">-->
+<!--			<span class="ti-settings"></span>-->
+<!--		</span>-->
+<!--		<span class="theme-color theme-default theme-active" data-color="green"></span>-->
+<!--		<span class="theme-color theme-blue" data-color="blue"></span>-->
+<!--		<span class="theme-color theme-red" data-color="red"></span>-->
+<!--		<span class="theme-color theme-violet" data-color="violet"></span>-->
+<!--		<span class="theme-color theme-yellow" data-color="yellow"></span>-->
+<!--	</div>-->
+<!--	&lt;!&ndash; /Color Changer &ndash;&gt;-->
+<!--	<div class="wrapper">-->
+<!--		&lt;!&ndash; Page Content &ndash;&gt;-->
+<!--		<div id="content">-->
+<!--				&lt;!&ndash; Top Navigation &ndash;&gt;-->
+<!--				<div class="container top-brand">-->
+<!--					<nav class="navbar navbar-default">-->
+<!--						<div class="navbar-header">-->
+<!--							<div class="sidebar-header"> <a href="index.html"><img src="images/logo-dark.png" class="logo" alt="logo"></a>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<ul class="nav justify-content-end">-->
+<!--							<li class="nav-item">-->
+<!--								<a class="nav-link">-->
+<!--									<span title="Fullscreen" class="ti-fullscreen fullscreen"></span>-->
+<!--								</a>-->
+<!--							</li>-->
+<!--							<li class="nav-item">-->
+<!--								<a class="nav-link" data-toggle="modal" data-target=".proclinic-modal-lg">-->
+<!--									<span class="ti-search"></span>-->
+<!--								</a>-->
+<!--								<div class="modal fade proclinic-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">-->
+<!--									<div class="modal-dialog modal-lorvens">-->
+<!--										<div class="modal-content proclinic-box-shadow2">-->
+<!--											<div class="modal-header">-->
+<!--												<h5 class="modal-title">Search Patient/Doctor:</h5>-->
+<!--												<span class="ti-close" data-dismiss="modal" aria-label="Close">-->
+<!--												</span>-->
+<!--											</div>-->
+<!--											<div class="modal-body">-->
+<!--												<form>-->
+<!--													<div class="form-group">-->
+<!--														<input type="text" class="form-control" id="search-term" placeholder="Type text here">-->
+<!--														<button type="button" class="btn btn-lorvens proclinic-bg">-->
+<!--															<span class="ti-location-arrow"></span> Search</button>-->
+<!--													</div>-->
+<!--												</form>-->
+<!--											</div>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--							</li>-->
+<!--							<li class="nav-item">-->
+<!--								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"-->
+<!--								 aria-expanded="false">-->
+<!--									<span class="ti-announcement"></span>-->
+<!--								</a>-->
+<!--								<div class="dropdown-menu proclinic-box-shadow2 notifications animated flipInY">-->
+<!--									<h5>Notifications</h5>-->
+<!--									<a class="dropdown-item" href="#">-->
+<!--										<span class="ti-wheelchair"></span> New Patient Added</a>-->
+<!--									<a class="dropdown-item" href="#">-->
+<!--										<span class="ti-money"></span> Patient payment done</a>-->
+<!--									<a class="dropdown-item" href="#">-->
+<!--										<span class="ti-time"></span>Patient Appointment booked</a>-->
+<!--									<a class="dropdown-item" href="#">-->
+<!--										<span class="ti-wheelchair"></span> New Patient Added</a>-->
+<!--								</div>-->
+<!--							</li>-->
+<!--							<li class="nav-item">-->
+<!--								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"-->
+<!--								 aria-expanded="false">-->
+<!--									<span class="ti-user"></span>-->
+<!--								</a>-->
+<!--								<div class="dropdown-menu proclinic-box-shadow2 profile animated flipInY">-->
+<!--									<h5>John Willing</h5>-->
+<!--									<a class="dropdown-item" href="#">-->
+<!--										<span class="ti-settings"></span> Settings</a>-->
+<!--									<a class="dropdown-item" href="#">-->
+<!--										<span class="ti-help-alt"></span> Help</a>-->
+<!--									<a class="dropdown-item" href="#">-->
+<!--										<span class="ti-power-off"></span> Logout</a>-->
+<!--								</div>-->
+<!--							</li>-->
+<!--						</ul>-->
+
+<!--					</nav>-->
+<!--				</div>-->
+<!--				&lt;!&ndash; /Top Navigation &ndash;&gt;-->
+<!--				&lt;!&ndash; Menu &ndash;&gt;-->
+<!--				<div class="container menu-nav">-->
+<!--					<nav class="navbar navbar-expand-lg proclinic-bg text-white">-->
+<!--						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"-->
+<!--						 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--							<span class="ti-menu text-white"></span>-->
+<!--						</button>-->
+
+<!--						<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--							<ul class="navbar-nav mr-auto">-->
+<!--								<li class="nav-item dropdown">-->
+<!--									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"-->
+<!--									 aria-expanded="false"><span class="ti-home"></span> Dashboard</a>-->
+<!--									<div class="dropdown-menu">-->
+<!--&lt;!&ndash;									<a class="dropdown-item" href="https://www.konnectplugins.com/proclinic/Vertical/index.html">Vertical</a>&ndash;&gt;-->
+<!--&lt;!&ndash;									<a class="dropdown-item" href="https://www.konnectplugins.com/proclinic/Vertical-RTL/index.html">Vertical RTL</a>&ndash;&gt;-->
+<!--									<a class="dropdown-item" href="index.html">Horizantal</a>-->
+<!--								</div>-->
+<!--								</li>-->
+<!--								<li class="nav-item dropdown">-->
+<!--									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"-->
+<!--									 aria-expanded="false"><span class="ti-wheelchair"></span> Patients</a>-->
+<!--									<div class="dropdown-menu">-->
+<!--										<a class="dropdown-item" href="add-patient.html">Add Patient</a>-->
+<!--										<a class="dropdown-item" href="patients.html">All Patients</a>-->
+<!--										<a class="dropdown-item" href="about-patient.html">Patient Details</a>-->
+<!--										<a class="dropdown-item" href="edit-patient.html">Edit Patient</a>-->
+<!--									</div>-->
+<!--								</li>-->
+<!--								<li class="nav-item dropdown active">-->
+<!--									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"-->
+<!--									 aria-expanded="false"><span class="ti-user"></span> Doctors</a>-->
+<!--									<div class="dropdown-menu">-->
+<!--										<a class="dropdown-item" href="add-doctor.html">Add Doctor</a>-->
+<!--										<a class="dropdown-item" href="doctors.html">All Doctors</a>-->
+<!--										<a class="dropdown-item" href="about-doctor.html">Doctor Details</a>-->
+<!--										<a class="dropdown-item" href="edit-doctor.html">Edit Doctor</a>-->
+<!--									</div>-->
+<!--								</li>-->
+<!--								<li class="nav-item dropdown">-->
+<!--									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"-->
+<!--									 aria-expanded="false"><span class="ti-pencil-alt"></span> Appointments</a>-->
+<!--									<div class="dropdown-menu">-->
+<!--										<a class="dropdown-item" href="add-appointment.html">Add Appointment</a>-->
+<!--										<a class="dropdown-item" href="appointments.html">All Appointments</a>-->
+<!--										<a class="dropdown-item" href="about-appointment.html">Appointment Details</a>-->
+<!--										<a class="dropdown-item" href="edit-appointment.html">Edit Appointment</a>-->
+<!--									</div>-->
+<!--								</li>-->
+<!--								<li class="nav-item dropdown">-->
+<!--									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"-->
+<!--									 aria-expanded="false"><span class="ti-money"></span> Payments</a>-->
+<!--									<div class="dropdown-menu">-->
+<!--										<a class="dropdown-item" href="add-payment.html">Add Payment</a>-->
+<!--										<a class="dropdown-item" href="payments.html">All Payments</a>-->
+<!--										<a class="dropdown-item" href="about-payment.html">Payment Invoice</a>-->
+<!--									</div>-->
+<!--								</li>-->
+<!--								<li class="nav-item dropdown">-->
+<!--									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"-->
+<!--									 aria-expanded="false"><span class="ti-key"></span> Room Allotments</a>-->
+<!--									<div class="dropdown-menu">-->
+<!--										<a class="dropdown-item" href="add-room.html">Add Room Allotment</a>-->
+<!--										<a class="dropdown-item" href="rooms.html">All Rooms</a>-->
+<!--										<a class="dropdown-item" href="edit-room.html">Edit Room Allotment</a>-->
+<!--									</div>-->
+<!--								</li>-->
+<!--&lt;!&ndash;								<li class="nav-item dropdown">&ndash;&gt;-->
+<!--&lt;!&ndash;									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"&ndash;&gt;-->
+<!--&lt;!&ndash;									 aria-expanded="false"><span class="ti-layout-tab"></span> UI Kit</a>&ndash;&gt;-->
+<!--&lt;!&ndash;									<div class="dropdown-menu">&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="typography.html">Typography</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="buttons.html">Buttons</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="cards.html">Cards</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="tabs.html">Tabs</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="accordions.html">Accordions</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="modals.html">Modals</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="lists.html">Lists &amp; Media Object</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="grid.html">Grid</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="progress-bars.html">Progress Bars</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="notifications-alerts.html">Notifications &amp; Alerts</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="pagination.html">Pagination</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="carousel.html">Carousel</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="tables.html"> Tables</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="charts-1.html">Morris</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="charts-2.html">Flot</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="map-1.html">Google Maps</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="map-2.html">Vector Maps</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="forms.html">Forms</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="font-awesome.html">Font Awesome </a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="themify.html">Themify</a>&ndash;&gt;-->
+<!--&lt;!&ndash;									</div>&ndash;&gt;-->
+<!--&lt;!&ndash;								</li>&ndash;&gt;-->
+<!--&lt;!&ndash;								<li class="nav-item dropdown">&ndash;&gt;-->
+<!--&lt;!&ndash;									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"&ndash;&gt;-->
+<!--&lt;!&ndash;									 aria-expanded="false"><span class="ti-file"></span> Other Pages</a>&ndash;&gt;-->
+<!--&lt;!&ndash;									<div class="dropdown-menu">&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="login.html">Login </a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="sign-up.html">Sign Up</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="404.html">404</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="blank-page.html">Blank Page</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="pricing.html">Pricing</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="faq.html">FAQ</a>&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="dropdown-item" href="invoice.html">Invoice</a>&ndash;&gt;-->
+<!--&lt;!&ndash;									</div>&ndash;&gt;-->
+<!--&lt;!&ndash;								</li>&ndash;&gt;-->
+<!--							</ul>-->
+<!--						</div>-->
+<!--					</nav>-->
+<!--				</div>-->
+<!--				&lt;!&ndash; /Menu &ndash;&gt;-->
+<!--				&lt;!&ndash; Breadcrumb &ndash;&gt;-->
+<!--				&lt;!&ndash; Page Title &ndash;&gt;-->
+			{% extends 'base.html' %}
+{% block content %}
+<!-- Breadcrumb -->
+				<div class="container mt-0">
+					<!--add doctor full row -->
+					<div class="row breadcrumb-bar">
+						<!--row starting from add doctor -->
+						<div class="col-md-6">
+							<!--add doctor waala block -->
+							<h3 class="block-title">Add Doctor</h3>
+						</div>
+						<div class="col-md-6">
+							<!--block adjacent to add doctor  -->
+							<ol class="breadcrumb">
+								<!--showing location of user block -->
+								<li class="breadcrumb-item">
+									<!--home logo -->
+									<a href="#">
+										<span class="ti-home"></span>
+									</a>
+								</li>
+								<li class="breadcrumb-item">Doctors</li>
+								<!--/doctor writing -->
+								<li class="breadcrumb-item active">Add Doctor</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			<div class="container">
+				<!--add doctor full form covering screen -->
+				<div class="row">
+					<!--add doctor small covering screen -->
+					<div class="col-md-12">
+						<!--add doctor small form -->
+						<div class="widget-area-2 proclinic-box-shadow">
+							<!--add doctor start form -->
+							<h3 class="widget-title">Add Doctor</h3>
+							<!--add doctor full row -->
+							<form>
+								<!--full form starting from doctor name -->
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<!--doctor name block -->
+										<label for="Doctor-name">Doctor Name</label>
+										<!--doctor name text in bold -->
+										<input type="text" class="form-control" placeholder="Enter Doctor name" id="Doctor-name">
+										<!--enter doctor name -->
+									</div>
+									<div class="form-group col-md-6">
+										<label for="dob">Date Of Birth</label>
+										<input type="date" placeholder="Date of Birth" class="form-control" id="dob">
+                                    </div>
+                                    <div class="form-group col-md-6">
+										<label for="specialization">Specialization</label>
+										<input type="text" placeholder="Specialization" class="form-control" id="specialization">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="experience">Experience</label>
+										<input type="text" placeholder="Experience" class="form-control" id="experience">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="age">Age</label>
+										<input type="text" placeholder="Age" class="form-control" id="age">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="phone">Phone</label>
+										<input type="text" placeholder="Phone" class="form-control" id="phone">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="email">Email</label>
+										<input type="email" placeholder="email" class="form-control" id="Email">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="gender">Gender</label>
+										<select class="form-control" id="gender">
+											<option>Male</option>
+											<option>Female</option>
+											<option>Other</option>
+										</select>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="about-doctor">Doctor Details</label>
+										<textarea placeholder="Doctor Details" class="form-control" id="about-doctor" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group col-md-6">
+										<label for="address">Address</label>
+										<textarea placeholder="Address" class="form-control" id="address" rows="3"></textarea>
+									</div>
+									<div class="form-check col-md-12 mb-2">
+										<!--please confirm row -->
+										<div class="text-left">
+											<div class="custom-control custom-checkbox">
+												<input class="custom-control-input" type="checkbox" id="ex-check-2">
+												<!--for check box-->
+												<label class="custom-control-label" for="ex-check-2">Please Confirm</label>
+												<!--for writing please confirm -->
+											</div>
+										</div>
+									</div>
+									<div class="form-group col-md-6 mb-3">
+										<!--submit button block -->
+										<button type="submit" class="btn btn-primary btn-lg">Submit</button>
+										<!--class for submit text -->
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+

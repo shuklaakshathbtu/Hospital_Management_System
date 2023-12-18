@@ -1,0 +1,72 @@
+
+{% extends 'base.html' %}
+{% block content %}
+			<div class="container">
+
+				<div class="row">
+					<!-- Widget Item -->
+					<div class="col-md-12">
+						<!--full form of add room allotment -->
+						<div class="widget-area-2 proclinic-box-shadow">
+							<h3 class="widget-title">Add Room Allotment</h3>
+							<form>
+								<!--form below add room allotment -->
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<!--room number block-->
+										<label for="room-number">Room Number</label>
+										<!--room number -->
+										<input type="text" class="form-control" placeholder="Enter Room Number" id="room-number">
+										<!--placeholder -->
+									</div>
+									<div class="form-group col-md-6">
+										<label for="room-type">Room Type</label>
+										<select class="form-control" id="room-type">
+											<option>ICU</option>
+											<option>General</option>
+											<option>AC Room</option>
+										</select>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="patient-name">Patient Name</label>
+										<input type="text" placeholder="Enter Patient Name" class="form-control" id="patient-name">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="allot-date">Allotment Date</label>
+										<input type="date" placeholder="Enter Room Allotment Date of " class="form-control" id="allot-date">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="discharge-date">Discharge Date</label>
+										<input type="date" placeholder="Enter Discharge Date of Patient" class="form-control" id="discharge-date">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="doctor-name">Doctor Name</label>
+										<!--label name of block-->
+										<input type="text" placeholder="Enter Doctor Name" class="form-control" id="doctor-name">
+									</div>
+
+									<div class="form-check col-md-12 mb-2">
+										<!--please confirm row data -->
+										<div class="text-left">
+											<div class="custom-control custom-checkbox">
+												<!--use for check box-->
+												<input class="custom-control-input" type="checkbox" id="ex-check-2">
+												<label class="custom-control-label" for="ex-check-2">Please Confirm</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group col-md-6 mb-3">
+										<!--allot room block-->
+										<button type="submit" class="btn btn-primary btn-lg">Allot Room</button>
+										<!--allot room button-->
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- /Widget Item -->
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

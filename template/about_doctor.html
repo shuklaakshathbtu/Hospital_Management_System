@@ -1,0 +1,168 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+				<div class="container mt-0">
+					<div class="row breadcrumb-bar">
+						<div class="col-md-6">
+							<h3 class="block-title">Doctor Details</h3>
+						</div>
+						<div class="col-md-6">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="#">
+										<span class="ti-home"></span>
+									</a>
+								</li>
+								<li class="breadcrumb-item">Doctors</li>
+								<li class="breadcrumb-item active">Doctor Details</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			<div class="container">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="widget-area-2 proclinic-box-shadow">
+                       <!--   doctor activity block -->
+                            <h3 class="widget-title">Doctor Details</h3>
+                            <div class="row no-mp">
+                                <div class="col-md-4">
+                                    <div class="card mb-4">
+                                        <img class="card-img-top" src="images/doctor.jpg" alt="Doctor Image">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Dr Major Sahab</h4>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Specialization</strong></td>
+                                                    <td>General Physician</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Experience</strong></td>
+                                                    <td>14 Years</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Gender</strong></td>
+                                                    <td>Male</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Address</strong></td>
+                                                    <td>Kanpur
+                                                        Uttar Pradesh, India</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Phone</strong> </td>
+                                                    <td>+91 11111 11111</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Date Of Birth</strong> </td>
+                                                    <td>26-10-2023</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Email</strong></td>
+                                                    <td>akshatshukla7537@gmail.com</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination justify-content-center export-pagination">
+
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#"><span class="ti-printer"></span> print</a>
+                                                </li>
+
+                                            </ul>
+                                        </nav>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /Widget Item -->
+                    <!-- Widget Item -->
+                    <div class="col-md-12">
+                        <!--whole block of doctor activity-->
+                        <div class="widget-area-2 proclinic-box-shadow">
+                            <!--doctor activity block starting from doctor activity-->
+                            <h3 class="widget-title">Doctor Activity</h3>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <!--whole table -->
+                                    <thead>
+                                    <!--heading of table-->
+                                        <tr>
+                                            <th>Patient Name</th>
+                                            <!--only patient name -->
+                                            <th>Injury/Condition</th>
+                                            <th>Visit Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <!--whole table -->
+                                        <tr>
+                                            <!--first row of table , below heading -->
+                                            <td>Rishabh Agnihotri</td>
+                                            <!---->
+                                            <td>Viral fever</td>
+                                            <td>12-03-2023</td>
+                                            <td>Condition is good</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Agnihotri </td>
+                                            <td>Hand Fracture</td>
+                                            <td>12-10-2023</td>
+                                            <td>Small Operation</td>
+                                        </tr>
+                                        <tr>
+                                            <td>harsh</td>
+                                            <td>Dengue</td>
+                                            <td>15-10-2018</td>
+                                            <td>Admintted in General ward</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                                <!--Export links-->
+                                <nav aria-label="Page navigation example">
+                                    <!--full row of print button -->
+                                    <ul class="pagination justify-content-center export-pagination">
+<!--                                        <li class="page-item">-->
+<!--                                            <a class="page-link" href="#"><span class="ti-download"></span> csv</a>-->
+<!--                                        </li>-->
+                                        <li class="page-item">
+                                            <!--full print button block-->
+                                            <a class="page-link" href="#">
+                                                <!--print text with logo-->
+                                                <span class="ti-printer">
+                                                    <!--printer block-->
+                                                </span> print</a>
+
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                                <!-- /Export links-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Widget Item -->
+                </div>
+			</div>
+
+		</div>
+		<!-- /Page Content -->
+	</div>
+{% endblock %}
+

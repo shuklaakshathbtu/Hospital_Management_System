@@ -1,0 +1,128 @@
+
+{% extends 'base.html' %}
+{% block content %}
+			<div class="container">
+
+				<div class="row">
+					<!-- Widget Item -->
+					<div class="col-md-12">
+						<div class="widget-area-2 proclinic-box-shadow">
+							<h3 class="widget-title">Patients List</h3>
+							<div class="table-responsive mb-3">
+								<table id="tableId" class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<th class="no-sort">
+												<div class="custom-control custom-checkbox">
+													<input class="custom-control-input" type="checkbox" id="select-all">
+													<label class="custom-control-label" for="select-all"></label>
+												</div>
+											</th>
+											<th>Patient ID</th>
+											<th>Patient Name</th>
+											<th>Age</th>
+											<th>Phone</th>
+											<th>last Visit</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="custom-control custom-checkbox">
+													<input class="custom-control-input" type="checkbox" id="1">
+													<label class="custom-control-label" for="1"></label>
+												</div>
+											</td>
+											<td>1</td>
+											<td>Ak</td>
+											<td>30</td>
+											<td>123456789</td>
+											<td>11/11//11</td>
+											<td>
+												<span class="badge badge-success">Completed</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="custom-control custom-checkbox">
+													<input class="custom-control-input" type="checkbox" id="2">
+													<label class="custom-control-label" for="2"></label>
+												</div>
+											</td>
+											<td>2</td>
+											<td>ak </td>
+											<td>26</td>
+											<td>123456789</td>
+											<td>11-11-11</td>
+											<td>
+												<span class="badge badge-warning">Pending</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="custom-control custom-checkbox">
+													<input class="custom-control-input" type="checkbox" id="3">
+													<label class="custom-control-label" for="3"></label>
+												</div>
+											</td>
+											<td>3</td>
+											<td>ak</td>
+											<td>22</td>
+											<td>123456789</td>
+											<td>11-11--111</td>
+											<td>
+												<span class="badge badge-danger">Cancelled</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="custom-control custom-checkbox">
+													<input class="custom-control-input" type="checkbox" id="4">
+													<label class="custom-control-label" for="4"></label>
+												</div>
+											</td>
+											<td>4</td>
+											<td>ak</td>
+											<td>233</td>
+											<td>1234567890</td>
+											<td>11-11-11</td>
+											<td>
+												<span class="badge badge-success">Completed</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="custom-control custom-checkbox">
+													<input class="custom-control-input" type="checkbox" id="5">
+													<label class="custom-control-label" for="5"></label>
+												</div>
+											</td>
+											<td>5</td>
+											<td>aa </td>
+											<td>26</td>
+											<td>123456789</td>
+											<td>11-11-11</td>
+											<td>
+												<span class="badge badge-warning">Pending</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<nav aria-label="Page navigation example">
+									<ul class="pagination justify-content-center export-pagination">
+										<li class="page-item">
+											<a class="page-link" href="#"><span class="ti-printer"></span>  print</a>
+										</li>
+									</ul>
+								</nav>
+								<button type="button" class="btn btn-danger mt-3 mb-0"><span class="ti-trash"></span> DELETE</button>
+								<button type="button" class="btn btn-primary mt-3 mb-0"><span class="ti-pencil-alt"></span> EDIT</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
